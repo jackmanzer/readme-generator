@@ -1,10 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {
-}
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
 function assignLicenseLink(license) {
   
   let licenseLink;
@@ -28,13 +22,6 @@ function assignLicenseLink(license) {
   return licenseLink;
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {
-  
-}
-
-// TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
 
   const licenseBadge = assignLicenseLink(data.license);
@@ -56,7 +43,8 @@ function generateMarkdown(data) {
         `    ${data.installation}\n` +
         `\n` +
         `## Usage\n` +
-        `${data.usageInformation}\n` +
+        `${data.usageInformation}\n\n` +
+        `Here's a [link](./utils/project-recording.mov) to a video demonstrating the application's functionality.\n` +
         `\n` +
         `## License\n` +
         `${licenseBadge}\n` +

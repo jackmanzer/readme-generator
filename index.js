@@ -13,9 +13,10 @@ const questions = [
     {type: 'input', message: "What command should be used to install your dependencies?", name: 'installation'},
     {type: 'input', message: "What command should be used to run tests?", name: 'testInstructions'},
     {type: 'input', message: "What does the user need to know about contributing to the repo?", name: 'contributionGuidelines'},
-    {type: 'input', message: "What does the user need to know about using the repo?", name: 'testInstructions'}
+    {type: 'input', message: "What does the user need to know about using the repo?", name: 'usageInformation'}
 ];
 
+console.log(questions)
 //gathers user input
 inquirer
   .prompt([...questions])
@@ -23,6 +24,7 @@ inquirer
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
+    console.log(data);
     const markdown = generateMarkdown(data);
     fs.writeFile(fileName, markdown, (err) => {
         err ? console.error(err) : console.log('Generating README...')
